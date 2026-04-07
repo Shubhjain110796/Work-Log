@@ -1,0 +1,171 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.invitation-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  overflow: hidden;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card-header {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.card-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.greeting {
+  font-size: 1.2rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.event-details {
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.detail-item:hover {
+  transform: translateX(5px);
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #495057;
+}
+
+.value {
+  color: #007bff;
+  font-weight: 500;
+}
+
+.countdown {
+  text-align: center;
+}
+
+.countdown h2 {
+  color: #495057;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(45deg, #ff6b6b, #ffa726);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 70px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.time-unit .label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.card-footer {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.card-footer p {
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+}
+
+.decorative-elements {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .invitation-card {
+    margin: 20px;
+  }
+
+  .card-header h1 {
+    font-size: 2rem;
+  }
+
+  .timer {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .time-unit {
+    min-width: 60px;
+    padding: 10px;
+  }
+
+  .number {
+    font-size: 1.5rem;
+  }
+}
