@@ -9,7 +9,6 @@ import jsPDF from 'jspdf';
 import type { User } from '@supabase/supabase-js';
 import 'react-calendar/dist/Calendar.css';
 import './App.css';
-import Card from './Card.tsx';
 import Login from './pages/Login.tsx';
 import Register from './pages/Register.tsx';
 import ForgotPassword from './pages/ForgotPassword.tsx';
@@ -482,7 +481,6 @@ function App() {
         <Route path="/register" element={!user ? <Register /> : <Navigate to="/" replace />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/" element={user ? <WorkLogApp user={user} /> : <Navigate to="/login" replace />} />
-        {/* <Route path="/card" element={<Card />} /> */}
       </Routes>
     </Router>
   );
